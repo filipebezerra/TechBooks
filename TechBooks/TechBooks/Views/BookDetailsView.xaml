@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Class="TechBooks.Views.BookDetailsView">
+  
+    <ScrollView>
+
+        <StackLayout Padding="16" Spacing="8" >
+            <Label
+                Text="{Binding BookDetails.Title}"
+                FontSize="35"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                />
+
+            <Label
+                Text="{Binding BookDetails.SubTitle}"
+                FontSize="28"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                TextColor="White"
+                HorizontalTextAlignment="Center"
+                />
+
+            <Image
+                Source="{Binding BookDetails.Image}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                />
+
+            <Label
+                Text="Book Description"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="Green"
+                />
+
+            <Label
+                Text="{Binding BookDetails.Description}"
+                FontSize="14"
+                TextColor="White"
+                />
+
+            <Label
+                Text="Book Details"
+                FontSize="28"
+                FontAttributes="Bold"
+                TextColor="Green"
+                />
+
+            <Grid ColumnSpacing="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Text="Publisher:"
+                    FontSize="14"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    />
+
+                <Label
+                    Text="{Binding BookDetails.Publisher}"
+                    FontSize="14"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    />
+
+                <Label
+                    Text="By:"
+                    FontSize="14"
+                    TextColor="White"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    />
+
+                <Label
+                    Text="{Binding BookDetails.Author}"
+                    FontSize="14"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    />
+
+                <Label
+                    Text="ISBN:"
+                    FontSize="14"
+                    TextColor="White"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    />
+
+                <Label
+                    Text="{Binding BookDetails.ISBN}"
+                    FontSize="14"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    />
+
+                <Label
+                    Text="Year:"
+                    FontSize="14"
+                    TextColor="White"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    />
+
+                <Label
+                    Text="{Binding BookDetails.Year}"
+                    FontSize="14"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    />
+
+                <Label
+                    Text="Pages:"
+                    FontSize="14"
+                    TextColor="White"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    />
+
+                <Label
+                    Text="{Binding BookDetails.Page}"
+                    FontSize="14"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    />
+            </Grid>
+
+            <Grid ColumnSpacing="30">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Text="Download:"
+                    FontSize="14"
+                    TextColor="White"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    />
+
+                <controls:HyperLinkLabel
+                    Text="{Binding BookDetails.Download}"
+                    NavigateUri="https://www.google.com"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    />
+            </Grid>
+
+        </StackLayout>
+
+    </ScrollView>
+  
+</ContentPage>
